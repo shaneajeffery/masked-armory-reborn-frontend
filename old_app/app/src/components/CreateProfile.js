@@ -174,7 +174,7 @@ class CreateProfile extends Component {
   render() {
     return (
       <Fragment>
-        <GaugesAnalyticsComponent id="5c01aac0701bf460c2e64553" />
+        
 
         <div className="container-fluid home">
           <div className="container">
