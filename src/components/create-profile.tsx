@@ -52,72 +52,33 @@ const CreateProfile = () => {
             of Wacraft account.
           </p>
         </div>
-        <div className="select"> Select Your Region</div>
-        <div className="region">
-          <div
-            className="us"
-            onClick={(event) => handleFlagChange(event, 'us')}
-          />
-          <div
-            className="eu"
-            onClick={(event) => handleFlagChange(event, 'eu')}
-          />
-        </div>
-        <div className="popup" id="usInputContainer">
-          <div className="form-group">
-            <form>
-              <input
-                value={state.serverName}
-                className="form-control"
-                id="usServers"
-                onChange={(event) => handleServerNameChange(event)}
-                placeholder="Server Name"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Character Name"
-                onChange={(event) => handleCharacterNameChange(event)}
-              />
-              <button
-                id="usSubmit"
-                className="select"
-                type="submit"
-                style={{ marginTop: '10px' }}
-                onClick={(event) => handleSubmit(event)}
-              >
-                Create Armory Profile
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="popup" id="euInputContainer">
-          <div className="form-group">
-            <form>
-              <input
-                value={state.serverName}
-                className="form-control"
-                id="euServers"
-                onChange={(event) => handleServerNameChange(event)}
-                placeholder="Server Name"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Character Name"
-                onChange={(event) => handleCharacterNameChange(event)}
-              />
-              <button
-                id="euSubmit"
-                className="select"
-                type="submit"
-                style={{ marginTop: '10px' }}
-                onClick={(event) => handleSubmit(event)}
-              >
-                Create Armory Profile
-              </button>
-            </form>
-          </div>
+        {/* <div className="select"> Select Your Region</div> */}
+
+        <div className="form-group">
+          <form>
+            <input
+              value={state.serverName}
+              className="form-control"
+              id="usServers"
+              onChange={(event) => handleServerNameChange(event)}
+              placeholder="Server Name"
+            />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Character Name"
+              onChange={(event) => handleCharacterNameChange(event)}
+            />
+            <button
+              id="usSubmit"
+              className="select"
+              type="submit"
+              style={{ marginTop: '10px' }}
+              onClick={(event) => handleSubmit(event)}
+            >
+              Create Armory Profile
+            </button>
+          </form>
         </div>
       </div>
     </div>

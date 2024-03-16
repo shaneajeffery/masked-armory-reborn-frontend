@@ -8,18 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       fontFamily: {
-        primary: ['var(--font-geist-sans)', 'serif'],
-        secondary: ['var(--font-geist-sans)', 'serif'],
+        primary: ['var(--font-geist-sans)'],
+        secondary: ['var(--font-geist-sans)'],
       },
     },
   },
-  plugins: [],
+
+  plugins: [require('@tailwindcss/forms')],
 };
 
 export default config;

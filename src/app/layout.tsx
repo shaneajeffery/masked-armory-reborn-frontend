@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-// import './globals.css';
 import { ReactNode } from 'react';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dim">
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
       </body>

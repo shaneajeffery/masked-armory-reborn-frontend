@@ -190,10 +190,7 @@ input {
 
 /* homepage */
 .home {
-  background-image: url(../images/home_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
+  /* background-image: url(../images/bg.jpg); */
   text-align: center;
   padding-top: 60px;
   padding-bottom: 70px;
