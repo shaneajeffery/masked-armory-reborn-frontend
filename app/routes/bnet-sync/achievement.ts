@@ -5,7 +5,7 @@ import {
   achievements as achievementsTable,
 } from 'db/schema';
 
-export async function GET() {
+export async function loader() {
   const api = new BlizzAPI({
     region: 'us',
     clientId: process.env.BATTLE_NET_CLIENT_ID,
