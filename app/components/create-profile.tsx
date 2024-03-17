@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
-import { Card, CardBody } from '@nextui-org/react';
+import { Card } from '@chakra-ui/react';
 
 const CreateProfile = () => {
   const [state, setState] = useState({
@@ -47,11 +47,7 @@ const CreateProfile = () => {
           </p> */}
         </div>
 
-        <Card>
-          <CardBody>
-            <p>Make beautiful websites regardless of your design experience.</p>
-          </CardBody>
-        </Card>
+        <Card>Hello World</Card>
 
         {/* <div className="select"> Select Your Region</div> */}
 

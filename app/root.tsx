@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { ReactNode } from 'react';
-import { NextUIProvider } from '@nextui-org/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import './assets/css/style.css';
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -19,16 +19,18 @@ export function Layout({ children }: { children: ReactNode }) {
         <Links />
       </head>
       <body>
-        <NextUIProvider>
-          {children}
-          <ScrollRestoration />
-          <Scripts />
-        </NextUIProvider>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
       </body>
     </html>
   );
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ChakraProvider>
+      <Outlet />
+    </ChakraProvider>
+  );
 }
