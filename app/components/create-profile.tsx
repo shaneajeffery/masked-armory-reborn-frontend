@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
+import { Card, CardBody } from '@nextui-org/react';
 
 const CreateProfile = () => {
   const [state, setState] = useState({
@@ -35,7 +36,7 @@ const CreateProfile = () => {
           <img src={logo} />
         </div>
         <div className="site-description">
-          <p>
+          {/* <p>
             Masked Armory has been around since 2007 and has become the most
             well-known anonymous armory profile source for World of Warcraft. We
             aim to keep things simple and just ask for your character&#39;s
@@ -43,11 +44,18 @@ const CreateProfile = () => {
             Our aim is to provide you a profile link that will keep you
             protected when you are attempting to buy, sell, or trade your World
             of Wacraft account.
-          </p>
+          </p> */}
         </div>
+
+        <Card>
+          <CardBody>
+            <p>Make beautiful websites regardless of your design experience.</p>
+          </CardBody>
+        </Card>
+
         {/* <div className="select"> Select Your Region</div> */}
 
-        <div className="form-group">
+        {/* <div className="form-group">
           <form>
             <input
               value={state.serverName}
@@ -71,8 +79,8 @@ const CreateProfile = () => {
             >
               Create Armory Profile
             </button>
-          </form>
-        </div>
+          </form> */}
+        {/* </div> */}
       </div>
     </div>
   );
