@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { ReactNode } from 'react';
-
+import { NextUIProvider } from '@nextui-org/react';
 import './assets/css/style.css';
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -19,9 +19,11 @@ export function Layout({ children }: { children: ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <NextUIProvider>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </NextUIProvider>
       </body>
     </html>
   );

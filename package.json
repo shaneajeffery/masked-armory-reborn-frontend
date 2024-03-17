@@ -12,6 +12,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.10",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
@@ -19,6 +20,7 @@
     "@vercel/remix": "^2.8.1-patch.2",
     "blizzapi": "^2.6.2",
     "drizzle-orm": "^0.30.2",
+    "framer-motion": "^11.0.14",
     "geist": "^1.2.2",
     "isbot": "^4.1.0",
     "pg": "^8.11.3",
@@ -47,6 +49,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-testing-library": "^6.2.0",
     "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"

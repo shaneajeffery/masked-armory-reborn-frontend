@@ -96,3 +96,11 @@ export const titles = pgTable('titles', {
   externalId: integer('external_id'),
   name: varchar('name', { length: 256 }),
 });
+
+export const toys = pgTable('toys', {
+  id: serial('id').primaryKey(),
+  externalId: integer('external_id'),
+  name: varchar('name', { length: 256 }),
+  itemId: integer('item_id'),
+  sourceType: varchar('source_type', { length: 256 }),
+});

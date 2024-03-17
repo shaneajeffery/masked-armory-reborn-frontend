@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/images/logo.png';
 
 const CreateProfile = () => {
   const [state, setState] = useState({
@@ -31,12 +32,7 @@ const CreateProfile = () => {
     <div className="container-fluid home">
       <div className="container">
         <div className="logo">
-          {/* <Image
-            src="/assets/images/logo.png"
-            width="200"
-            alt="logo"
-            height="150"
-          /> */}
+          <img src={logo} />
         </div>
         <div className="site-description">
           <p>
