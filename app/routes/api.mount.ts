@@ -1,6 +1,7 @@
+import { json } from '@remix-run/node';
 import { BlizzAPI } from 'blizzapi';
-import { db } from 'db/connection';
-import { mounts as mountsTable } from 'db/schema';
+import { db } from 'db/connection.server';
+import { mounts as mountsTable } from 'db/schema.server';
 
 export async function loader() {
   const api = new BlizzAPI({
@@ -30,5 +31,5 @@ export async function loader() {
     });
   }
 
-  return Response.json({});
+  return json({ success: true }, 200);
 }

@@ -90,3 +90,9 @@ export const pets = pgTable('pets', {
   creatureId: integer('creature_id'),
   sourceType: varchar('source_type', { length: 256 }),
 });
+
+export const titles = pgTable('titles', {
+  id: serial('id').primaryKey(),
+  externalId: integer('external_id'),
+  name: varchar('name', { length: 256 }),
+});

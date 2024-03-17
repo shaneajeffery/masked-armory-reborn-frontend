@@ -1,9 +1,10 @@
 import { BlizzAPI } from 'blizzapi';
-import { db } from 'db/connection';
+import { db } from 'db/connection.server';
 import {
   usRealms as usRealmsTable,
   euRealms as euRealmsTable,
-} from 'db/schema';
+} from 'db/schema.server';
+import { json } from '@remix-run/node';
 
 export async function loader() {
   // Import all US servers.
@@ -44,5 +45,5 @@ export async function loader() {
     });
   }
 
-  return Response.json({});
+  return json({ success: true }, 200);
 }
