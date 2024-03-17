@@ -2,7 +2,7 @@ import { BlizzAPI } from 'blizzapi';
 import { db } from 'db/connection';
 import { mounts as mountsTable } from 'db/schema';
 
-export async function GET() {
+export async function loader() {
   const api = new BlizzAPI({
     region: 'us',
     clientId: process.env.BATTLE_NET_CLIENT_ID,

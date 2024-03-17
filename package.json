@@ -1,7 +1,8 @@
 {
-  "name": "",
-  "private": true,
+  "name": "masked-armory-reborn",
+  "private": false,
   "sideEffects": false,
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "build": "remix vite:build",

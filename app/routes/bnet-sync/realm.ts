@@ -5,7 +5,7 @@ import {
   euRealms as euRealmsTable,
 } from 'db/schema';
 
-export async function GET() {
+export async function loader() {
   // Import all US servers.
   const usApi = new BlizzAPI({
     region: 'us',
