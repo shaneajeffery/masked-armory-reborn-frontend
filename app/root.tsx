@@ -4,9 +4,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react';
+import { ReactNode } from 'react';
 
-export function Layout({ children }: { children: React.ReactNode }) {
+import './assets/css/style.css';
+
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>

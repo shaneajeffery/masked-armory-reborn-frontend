@@ -1,6 +1,3 @@
-
-
-import Image from 'next/image';
 import { useState } from 'react';
 
 const CreateProfile = () => {
@@ -34,12 +31,12 @@ const CreateProfile = () => {
     <div className="container-fluid home">
       <div className="container">
         <div className="logo">
-          <Image
+          {/* <Image
             src="/assets/images/logo.png"
             width="200"
             alt="logo"
             height="150"
-          />
+          /> */}
         </div>
         <div className="site-description">
           <p>

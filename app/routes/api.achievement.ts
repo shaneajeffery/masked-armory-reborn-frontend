@@ -1,9 +1,10 @@
 import { BlizzAPI } from 'blizzapi';
-import { db } from 'db/connection';
+import { db } from 'db/connection.server';
 import {
   achievementCategories as achievementCategoriesTable,
   achievements as achievementsTable,
-} from 'db/schema';
+} from 'db/schema.server';
+import { json } from '@remix-run/node';
 
 export async function loader() {
   const api = new BlizzAPI({
@@ -74,5 +75,5 @@ export async function loader() {
     });
   }
 
-  return Response.json({});
+  return json({ success: true }, 200);
 }
