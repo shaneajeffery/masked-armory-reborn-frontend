@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
-import { Card } from '@chakra-ui/react';
 
 const CreateProfile = () => {
   const [state, setState] = useState({
@@ -36,7 +35,7 @@ const CreateProfile = () => {
           <img src={logo} />
         </div>
         <div className="site-description">
-          {/* <p>
+          <p>
             Masked Armory has been around since 2007 and has become the most
             well-known anonymous armory profile source for World of Warcraft. We
             aim to keep things simple and just ask for your character&#39;s
@@ -44,39 +43,39 @@ const CreateProfile = () => {
             Our aim is to provide you a profile link that will keep you
             protected when you are attempting to buy, sell, or trade your World
             of Wacraft account.
-          </p> */}
+          </p>
         </div>
 
-        <Card>Hello World</Card>
+        <div className="select"> Select Your Region</div>
 
-        {/* <div className="select"> Select Your Region</div> */}
-
-        {/* <div className="form-group">
-          <form>
-            <input
-              value={state.serverName}
-              className="form-control"
-              id="usServers"
-              onChange={(event) => handleServerNameChange(event)}
-              placeholder="Server Name"
-            />
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Character Name"
-              onChange={(event) => handleCharacterNameChange(event)}
-            />
-            <button
-              id="usSubmit"
-              className="select"
-              type="submit"
-              style={{ marginTop: '10px' }}
-              onClick={(event) => handleSubmit(event)}
-            >
-              Create Armory Profile
-            </button>
-          </form> */}
-        {/* </div> */}
+        <div className="popup" id="usInputContainer">
+          <div className="form-group">
+            <form>
+              <input
+                value={state.serverName}
+                className="form-control"
+                id="usServers"
+                onChange={(event) => handleServerNameChange(event)}
+                placeholder="Server Name"
+              />
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Character Name"
+                onChange={(event) => handleCharacterNameChange(event)}
+              />
+              <button
+                id="usSubmit"
+                className="select"
+                type="submit"
+                style={{ marginTop: '10px' }}
+                onClick={(event) => handleSubmit(event)}
+              >
+                Create Armory Profile
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   );

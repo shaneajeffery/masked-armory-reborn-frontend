@@ -327,7 +327,7 @@ input {
 }
 
 .home .popup {
-  max-width: 350px;
+  max-width: 450px;
   height: auto;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -339,12 +339,12 @@ input {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  display: none;
+  /* display: none; */
   margin-bottom: 50px;
 }
 
 .home .popup::after {
-  content: ' ';
+  /* content: ' '; */
   width: 0px;
   height: 0px;
   border-bottom: 10px #c2c2c2 solid;

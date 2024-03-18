@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { ReactNode } from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+
 import './assets/css/style.css';
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -28,9 +28,5 @@ export function Layout({ children }: { children: ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <ChakraProvider>
-      <Outlet />
-    </ChakraProvider>
-  );
+  return <Outlet />;
 }
