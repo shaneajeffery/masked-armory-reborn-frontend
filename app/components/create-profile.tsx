@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
 import Select from 'react-select';
+import Autocomplete from './autocomplete';
 
 const CreateProfile = ({ usRealmData, euRealmData }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -54,7 +55,7 @@ const CreateProfile = ({ usRealmData, euRealmData }) => {
         <div className="popup" id="usInputContainer">
           <div className="form-group">
             <form>
-              <Select
+              <Autocomplete
                 defaultValue={selectedOption}
                 // onChange={setSelectedOption}
                 options={usRealmData}
