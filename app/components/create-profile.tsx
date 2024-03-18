@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
+import Select from 'react-select';
 
-const CreateProfile = () => {
+const CreateProfile = ({ usRealmData, euRealmData }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const [state, setState] = useState({
     region: 'us',
     usServerList: [],
@@ -51,13 +54,18 @@ const CreateProfile = () => {
         <div className="popup" id="usInputContainer">
           <div className="form-group">
             <form>
-              <input
+              <Select
+                defaultValue={selectedOption}
+                // onChange={setSelectedOption}
+                options={usRealmData}
+              />
+              {/* <input
                 value={state.serverName}
                 className="form-control"
                 id="usServers"
                 onChange={(event) => handleServerNameChange(event)}
                 placeholder="Server Name"
-              />
+              /> */}
               <input
                 type="text"
                 className="form-control"
