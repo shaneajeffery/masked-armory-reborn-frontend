@@ -1,0 +1,7 @@
+LICENSE.md
+tsconfig.json
+tsconfig.*.json
+.github
+.vscode
+node_modules
+.prettierrc
