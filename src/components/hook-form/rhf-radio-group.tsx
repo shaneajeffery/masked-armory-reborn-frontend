@@ -1,14 +1,22 @@
-import PropTypes from 'prop-types';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import Radio from '@mui/material/Radio';
-import FormLabel from '@mui/material/FormLabel';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import {
+  Radio,
+  FormLabel,
+  RadioGroup,
+  FormControl,
+  FormHelperText,
+  FormControlLabel,
+} from '@mui/material';
 
-// ----------------------------------------------------------------------
+interface Props {
+  row: boolean;
+  name: string;
+  label: string;
+  options: Record<string, any>[];
+  spacing: number;
+  helperText: string;
+}
 
 export default function RHFRadioGroup({
   row,
@@ -17,8 +25,8 @@ export default function RHFRadioGroup({
   options,
   spacing,
   helperText,
-  ...other
-}) {
+  ...rest
+}: Props) {
   const { control } = useFormContext();
 
   const labelledby = label ? `${name}-${label}` : '';
@@ -35,7 +43,7 @@ export default function RHFRadioGroup({
             </FormLabel>
           )}
 
-          <RadioGroup {...field} aria-labelledby={labelledby} row={row} {...other}>
+          <RadioGroup {...field} aria-labelledby={labelledby} row={row} {...rest}>
             {options.map((option) => (
               <FormControlLabel
                 key={option.value}
@@ -67,12 +75,3 @@ export default function RHFRadioGroup({
     />
   );
 }
-
-RHFRadioGroup.propTypes = {
-  helperText: PropTypes.string,
-  label: PropTypes.string,
-  name: PropTypes.string,
-  options: PropTypes.array,
-  row: PropTypes.bool,
-  spacing: PropTypes.number,
-};

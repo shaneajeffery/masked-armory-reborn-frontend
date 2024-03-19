@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
 
+// @ts-ignore
 export default function MainLayout({ children }) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: 1 }}>

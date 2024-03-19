@@ -27,6 +27,7 @@ export default function RHFAutocomplete({
       control={control}
       render={({ field, fieldState: { error } }) => {
         return (
+          // @ts-ignore
           <Autocomplete
             {...field}
             id={`autocomplete-${name}`}
