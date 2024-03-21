@@ -1,8 +1,6 @@
 import { alpha } from '@mui/material/styles';
 import { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
-// ----------------------------------------------------------------------
-
 const COLORS = ['default', 'primary', 'secondary', 'info', 'success', 'warning', 'error'];
 
 const colorByName = (name) => {
@@ -16,8 +14,6 @@ const colorByName = (name) => {
   if (['v', 'x', 'y'].includes(charAt)) return 'error';
   return 'default';
 };
-
-// ----------------------------------------------------------------------
 
 export function avatar(theme) {
   return {

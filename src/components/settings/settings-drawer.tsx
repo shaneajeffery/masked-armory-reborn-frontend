@@ -1,26 +1,26 @@
 'use client';
 
-import Stack from '@mui/material/Stack';
-import Badge from '@mui/material/Badge';
-import Divider from '@mui/material/Divider';
-import Tooltip from '@mui/material/Tooltip';
-import { useTheme } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Drawer, { drawerClasses } from '@mui/material/Drawer';
+import {
+  Stack,
+  Badge,
+  Divider,
+  Tooltip,
+  useTheme,
+  IconButton,
+  Typography,
+  Drawer,
+  drawerClasses,
+} from '@mui/material';
 
 import { paper } from 'src/theme/css';
 
-import Iconify from '../../iconify';
-import Scrollbar from '../../scrollbar';
+import Iconify from '@/components/iconify';
+import Scrollbar from '@/components/scrollbar';
 import BaseOptions from './base-option';
-import LayoutOptions from './layout-options';
-import PresetsOptions from './presets-options';
-import StretchOptions from './stretch-options';
-import { useSettingsContext } from '../context';
-import FullScreenOption from './fullscreen-option';
 
-// ----------------------------------------------------------------------
+import PresetsOptions from './presets-options';
+
+import { useSettingsContext } from '@/components/settings/settings-context';
 
 export default function SettingsDrawer() {
   const theme = useTheme();
@@ -88,59 +88,6 @@ export default function SettingsDrawer() {
     </div>
   );
 
-  const renderDirection = (
-    <div>
-      <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Direction
-      </Typography>
-
-      <BaseOptions
-        value={settings.themeDirection}
-        onChange={(newValue) => settings.onUpdate('themeDirection', newValue)}
-        options={['ltr', 'rtl']}
-        icons={['align_left', 'align_right']}
-      />
-    </div>
-  );
-
-  const renderLayout = (
-    <div>
-      <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
-        Layout
-      </Typography>
-
-      <LayoutOptions
-        value={settings.themeLayout}
-        onChange={(newValue) => settings.onUpdate('themeLayout', newValue)}
-        options={['vertical', 'horizontal', 'mini']}
-      />
-    </div>
-  );
-
-  const renderStretch = (
-    <div>
-      <Typography
-        variant="caption"
-        component="div"
-        sx={{
-          ...labelStyles,
-          display: 'inline-flex',
-          alignItems: 'center',
-        }}
-      >
-        Stretch
-        <Tooltip title="Only available at large resolutions > 1600px (xl)">
-          <Iconify icon="eva:info-outline" width={16} sx={{ ml: 0.5 }} />
-        </Tooltip>
-      </Typography>
-
-      <StretchOptions
-        value={settings.themeStretch}
-        onChange={() => settings.onUpdate('themeStretch', !settings.themeStretch)}
-      />
-    </div>
-  );
-
   const renderPresets = (
     <div>
       <Typography variant="caption" component="div" sx={{ ...labelStyles }}>
@@ -176,20 +123,10 @@ export default function SettingsDrawer() {
       <Scrollbar>
         <Stack spacing={3} sx={{ p: 3 }}>
           {renderMode}
-
           {renderContrast}
-
-          {renderDirection}
-
-          {renderLayout}
-
-          {renderStretch}
-
           {renderPresets}
         </Stack>
       </Scrollbar>
-
-      <FullScreenOption />
     </Drawer>
   );
 }

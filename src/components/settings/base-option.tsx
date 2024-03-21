@@ -4,9 +4,16 @@ import Stack from '@mui/material/Stack';
 import { alpha } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import SvgColor from '../../svg-color';
+import SvgColor from '@/components/svg-color';
 
 // ----------------------------------------------------------------------
+
+BaseOptions.propTypes = {
+  icons: PropTypes.arrayOf(PropTypes.string),
+  onChange: PropTypes.func,
+  options: PropTypes.array,
+  value: PropTypes.string,
+};
 
 export default function BaseOptions({ icons, options, value, onChange }) {
   return (
@@ -51,9 +58,4 @@ export default function BaseOptions({ icons, options, value, onChange }) {
   );
 }
 
-BaseOptions.propTypes = {
-  icons: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func,
-  options: PropTypes.array,
-  value: PropTypes.string,
-};
+

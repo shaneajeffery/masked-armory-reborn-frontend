@@ -4,8 +4,6 @@ import { autocompleteClasses } from '@mui/material/Autocomplete';
 
 import { paper, menuItem } from '../../css';
 
-// ----------------------------------------------------------------------
-
 export function autocomplete(theme) {
   return {
     MuiAutocomplete: {
