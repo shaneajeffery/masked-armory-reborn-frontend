@@ -115,6 +115,8 @@ const Autocomplete = (props) => (
         ),
       noOptionsMessage: () => noOptionsMessageStyles,
     }}
+    getOptionLabel={(option: any) => `${option.name}`}
+    getOptionValue={(option: any) => `${option.slug}`}
     {...props}
   />
 );

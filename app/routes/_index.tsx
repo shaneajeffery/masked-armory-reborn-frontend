@@ -12,18 +12,24 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const usRealmData = await db
-    .select({ label: usRealms.name, value: usRealms.slug })
-    .from(usRealms)
-    .orderBy(usRealms.name);
-  const euRealmData = await db
-    .select({ label: euRealms.name, value: euRealms.slug })
-    .from(euRealms)
-    .orderBy(euRealms.name);
+  // const usRealmData = await db
+  //   .select({ label: usRealms.name, value: usRealms.slug })
+  //   .from(usRealms)
+  //   .orderBy(usRealms.name);
+  // const euRealmData = await db
+  //   .select({ label: euRealms.name, value: euRealms.slug })
+  //   .from(euRealms)
+  //   .orderBy(euRealms.name);
+
+  const res = await fetch('http://localhost:8080/v1/realms');
+
+  const realmData = await res.json();
+
+  console.log(realmData);
 
   return json({
-    usRealmData,
-    euRealmData,
+    usRealmData: realmData.usRealms,
+    euRealmData: realmData.euRealms,
   });
 }
 
