@@ -7,7 +7,7 @@ import {
 } from '@remix-run/react';
 import { ReactNode } from 'react';
 
-import './assets/css/style.css';
+// import './assets/css/style.css';
 import stylesheet from './tailwind.css?url';
 import { LinksFunction } from '@remix-run/node';
 
