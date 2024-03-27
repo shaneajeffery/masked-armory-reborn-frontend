@@ -7,14 +7,6 @@ import {
 } from '@remix-run/react';
 import { ReactNode } from 'react';
 
-// import './assets/css/style.css';
-import stylesheet from './tailwind.css?url';
-import { LinksFunction } from '@remix-run/node';
-
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: stylesheet },
-];
-
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" data-theme="dark">
