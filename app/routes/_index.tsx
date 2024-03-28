@@ -1,7 +1,5 @@
 import { json, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import { db } from 'db/connection.server';
-import { euRealms, usRealms } from 'db/schema.server';
 import CreateProfile from '~/components/create-profile';
 
 export const meta: MetaFunction = () => {

@@ -17,6 +17,7 @@
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
     "@vercel/remix": "^2.8.1-patch.2",
+    "blizzapi": "^2.6.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "isbot": "^4.1.0",
